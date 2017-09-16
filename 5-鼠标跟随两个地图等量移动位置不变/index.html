@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+        <link rel="stylesheet" href="css/reset.css" />
+		<style>
+		#moveArea{position: relative; border: black solid 1px; width: 800px; height:800px; overflow: hidden; margin: 20px auto;}
+		#moveArea>img{ width: 100%;}
+        #moveMap{ width:20px; height:20px; background:red; position:absolute;}
+        #getArea{border: solid 1px red; width:400px;height:400px; position:relative;overflow: hidden;right:0; bottom: 0;}
+        #getArea>img{ width: 100%;}
+        .moveTarget{background: black; width: 5px;height: 5px; top:0;left: 0; position: absolute;}
+        </style> 
+        <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+       
+	</head>
+	<body>
+	<div id="moveArea">
+        <div id="moveMap">
+    	</div>	
+    	<img src="img/img.png"  />
+    </div>
+    <div id="getArea">
+    	 <div class="moveTarget">
+
+    	 </div>
+    	 <img src="img/img.png"  />
+    </div>
+    <script type="text/javascript" src="js/new.js" ></script>
+     <script>
+     $(function(){
+         	 $("#moveArea").lightMove({
+         	 	movemap:"#moveMap",
+         	 	movetarget:".moveTarget",
+         	 	getarea:"#getArea",
+          	 	defaultStaus:true
+          	 });
+   
+        })
+     </script>
+	</body>
+	
+</html>

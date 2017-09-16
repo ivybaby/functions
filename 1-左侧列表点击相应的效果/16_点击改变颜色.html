@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>点击相应的dd，改变颜色背景</title>
+<script src="jquery-1.10.1.js" type="text/javascript"></script>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	font-family:"微软雅黑";
+	list-style: none;
+	color:#666
+}
+img {border: 0;}
+a,a:hover{ text-decoration:none;}
+.left_nav dt{line-height:53px;padding-left:25px;font-size:17px; border-left:white solid 1px; font-weight:bold;}
+.left_nav{ width:201px;border: #CCC solid 1px;height:621px; font-size:15px;}
+.left_nav dl dd a{line-height:50px;position:relative;width:134px;padding:0 33px; display:block;white-space:nowrap;
+ text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow: hidden;border-left:white solid 1px;border-bottom:1px solid #CCC;}
+.left_nav dl dd a:hover{ background: #2395EE;}
+.dt{background:#CCC;}
+.dd{background:white;}
+.chane{background: #EAEAEA;color: #2395EE;}
+.click{background:#0672BF;}
+.left_nav dl dd a:hover,.dd,.click{color:white;}
+</style>
+<script type="text/javascript">
+     $(function(){
+     var a=0;
+	 $(".left_nav dt").addClass("dt");
+	 $(".left_nav dd").addClass("dd");
+	 
+	 /*点击事件*/
+     $(".left_nav dd").click(function(){
+	    var dt=$(".left_nav dt");
+	    var x=$(this).attr("role");
+		if(a>0){
+			 $(dt).removeClass("click");
+			 $(".left_nav dd a").removeClass("chane");
+		}
+			$(dt[x-1]).addClass("click");
+		    $(this).find("a").addClass("chane"); 
+		a++;
+         });
+	 }); 
+
+</script>
+
+</head>
+
+<body style="background: #ECEEED;">
+           <div class="left_nav">
+                  <dl>
+                        <dt class="remove">应用服务</dt>
+                        <dd role="1" ><a href="#"  >云服务器</a> </dd>
+                        <dd role="1" ><a href="#" >云服务器</a> </dd>
+                        <dd role="1" ><a href="#">云服务器</a> </dd>
+                  </dl>
+                  <dl>
+                        <dt class="remove">应用服务</dt>
+                        <dd role="2"><a href="#">云服务器</a> </dd>
+                        <dd role="2"><a href="#">云服务器</a> </dd>
+                        <dd role="2"><a href="#">云服务器</a> </dd>
+                        <dd role="2"><a href="#">云服务云服务器</a></dd>
+                  </dl>
+                  <dl>
+                        <dt class="remove">应用服务</dt>
+                        <dd role="3"><a href="#" >云服务器</a> </dd>
+                        <dd role="3"><a href="#" >云服务器</a> </dd>
+                  </dl>
+            </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+img{border:0;}
+#light,.white_content,.black_overlay,.scrollbar,#images li:hover .overlay {
+      display: none;
+}
+
+#light .leftO,#light .rightO{
+   position:absolute;
+   top:40%;
+   cursor:pointer;
+   width:31px;
+   height:30px;
+}
+#light .rightO{right:-2%;}
+#light .leftO{left:-8%;}
+#light .button{
+    width:103px;
+    height:32px;
+    position:absolute;
+    top:105%;
+    right:43%;
+  }
+
+#light .close-img {
+    position: absolute;/*±È½ÏÖØÒª*/
+    top: -22px;
+    right: -80px;
+    cursor: pointer; 
+  }
+  
+/*lightbox*/
+.white_content 
+{ 
+         position: absolute;
+     margin:auto;
+         z-index:1003; 
+     top:-5%;
+         left:-23.5%;
+         width: 530px;
+         height: 350px;
+           
+ }
+ .black_overlay{ 
+       
+            position: absolute; 
+            top: 0%; 
+            left: 0%; 
+            width: 100%; 
+            height: 100%; 
+            background-color:#333333;
+            z-index:1001; 
+            -moz-opacity: 0.8; 
+            opacity:1.0; 
+            filter: alpha(opacity=80); 
+} 
+ 
+.scrollbar{
+
+       
+          position: absolute;
+      top:470px;
+      left: 20%;
+      z-index:1002; 
+}
+
+
+#top {
+  width: 820px;
+  margin: 0 auto;
+  display: none;
+   }    
+    
+
+
+
+
+
+/*¹ö¶¯À¸*/
+
+#images {
+  width: 760px;
+  height: 92px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #111; 
+  }
+#images li 
+{
+    float: left;
+    border: 1px solid #111;
+    position: relative;
+    height: 90px;
+  width: 150px;
+}
+#images li img 
+{
+      width: 150px;
+      height: 90px; 
+}
+
+.rotate{
+  -ms-transform: rotate(360deg);   /* IE 9 */
+  -webkit-transform: rotate(360deg); /* Safari and Chrome */
+  -o-transform: rotate(360deg);    /* Opera */
+  /*transform: retate(360deg);
+  transition-duration: 0.4s;
+  -moz-transform: rotate(0deg);*/
+  -ms-transition-duration:0.4s;
+  -webkit-transition-duration: 0.4s; /* Safari 和 Chrome */
+  -o-transition-duration: 0.4s; /* Opera */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=4);
+}
+
+
+
+
+/*×óÓÒ¼ü*/
+#left, #right {
+  display: inline-block;
+  vertical-align: middle; 
+  }
+
+#left img,#right img 
+{
+  width: 20px;
+  height: 40px; 
+  }
+
+
+.slide .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #333333;
+  opacity: 0.7; 
+}
